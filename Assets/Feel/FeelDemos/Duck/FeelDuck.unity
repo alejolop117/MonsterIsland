@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,9 +118,91 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &105357990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1599384349, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105357991}
+  - component: {fileID: 105357993}
+  - component: {fileID: 105357992}
+  m_Layer: 5
+  m_Name: InstructionsText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &105357991
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1599384350, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105357990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717996844}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &105357992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1599384351, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105357990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5686e06ef14cf104b8e282ee7c41b9a6, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 45
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Tap anywhere to jump
+--- !u!222 &105357993
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1599384352, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105357990}
+  m_CullTransparentMesh: 0
 --- !u!1 &146274106
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,10 +233,12 @@ ParticleSystemRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -181,6 +265,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -197,11 +282,17 @@ ParticleSystemRenderer:
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
+  m_FreeformStretching: 0
+  m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!198 &146274108
 ParticleSystem:
@@ -210,19 +301,19 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146274106}
-  serializedVersion: 6
+  serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
+  emitterVelocityMode: 0
   looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -772,6 +863,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     maxNumParticles: 1000
+    customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 1
     rotation3D: 0
     gravityModifier:
@@ -2354,6 +2446,62 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+  LifetimeByEmitterSpeedModule:
+    enabled: 0
+    m_Curve:
+      serializedVersion: 2
+      minMaxState: 1
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: -0.8
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 0.2
+          inSlope: -0.8
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    m_Range: {x: 0, y: 1}
   ForceModule:
     enabled: 0
     x:
@@ -3784,19 +3932,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -3970,17 +4119,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -4929,11 +5081,92 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.21416718, y: -0.41405517, z: 8.176}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1563117870}
   m_Father: {fileID: 1984084854}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &185271607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323920118021, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185271608}
+  - component: {fileID: 185271610}
+  - component: {fileID: 185271609}
+  m_Layer: 5
+  m_Name: NextDemoText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &185271608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323920118022, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185271607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235509323}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 7.6}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &185271609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323920118023, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185271607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 53aebb2602873ed4a9807e8a254a7d2f, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: NEXT DEMO
+--- !u!222 &185271610
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323920118016, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185271607}
+  m_CullTransparentMesh: 0
 --- !u!1 &261930199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,6 +5194,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 787869662}
   m_RootOrder: 0
@@ -4976,10 +5210,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5004,8 +5240,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1488195887490226262, guid: 9ce434ac86a021e418c3060399e7abdd,
-    type: 3}
+  m_Sprite: {fileID: -1488195887490226262, guid: 9ce434ac86a021e418c3060399e7abdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5013,7 +5248,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &263465340
@@ -5066,6 +5301,7 @@ MonoBehaviour:
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
   CooldownDuration: 0
   InitialDelay: 0
   CanPlayWhileAlreadyPlaying: 1
@@ -5077,19 +5313,40 @@ MonoBehaviour:
     OnPlay:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnPause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnResume:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnRevert:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
+    <OnPlayIsNull>k__BackingField: 0
+    <OnPauseIsNull>k__BackingField: 0
+    <OnResumeIsNull>k__BackingField: 0
+    <OnRevertIsNull>k__BackingField: 0
+    <OnCompleteIsNull>k__BackingField: 0
   DebugActive: 0
+  <IsPlaying>k__BackingField: 0
+  <TimesPlayed>k__BackingField: 0
+  <InScriptDrivenPause>k__BackingField: 0
+  <ContainsLoop>k__BackingField: 0
+  <ShouldRevertOnNextPlay>k__BackingField: 0
+  _startTime: 0
+  _holdingMax: 0
+  _lastStartAt: -3.4028235e+38
+  _pauseFound: 0
+  _totalDuration: 0
+  _shouldStop: 0
 --- !u!114 &263465342
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5125,7 +5382,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   RepeatUntilStopped: 0
   Channel: 0
   CameraShakeProperties:
@@ -5145,6 +5417,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 787869662}
   m_RootOrder: 1
@@ -5184,7 +5457,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   BoundAnimator: {fileID: 787869660}
   UpdateTrigger: 1
   TriggerMode: 0
@@ -5210,6 +5498,12 @@ MonoBehaviour:
   FloatValueMin: 0
   FloatValueMax: 5
   FloatIncrement: 1
+  _triggerParameter: 0
+  _boolParameter: 0
+  _intParameter: 0
+  _floatParameter: 0
+  _randomTriggerParameters: 
+  _randomBoolParameters: 
 --- !u!114 &263465345
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5245,7 +5539,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   Channel: 0
   Duration: 0.15
   ResetShakerValuesAfterShake: 1
@@ -5253,10 +5562,8 @@ MonoBehaviour:
   RemapIntensityZero: 0
   RemapIntensityOne: 0.5
   Intensity:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -5264,8 +5571,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.5
+    - time: 0.5
       value: 1
       inSlope: 0
       outSlope: 0
@@ -5273,8 +5579,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -5322,7 +5627,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   Sfx: {fileID: 8300000, guid: 4cf47ad5b31ea6640addd4045fa77c8b, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -5334,6 +5654,12 @@ MonoBehaviour:
   MinPitch: 0.8
   MaxPitch: 1.2
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!114 &263465347
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5369,7 +5695,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   Sfx: {fileID: 8300000, guid: 86aa66a501648034f8ec69ba5d404514, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -5381,6 +5722,12 @@ MonoBehaviour:
   MinPitch: 0.9
   MaxPitch: 1.2
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!1 &303766947
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,6 +5754,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1563117870}
   m_RootOrder: 0
@@ -5437,11 +5785,62 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 787869662}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &450227354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2647742814816197610, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450227355}
+  - component: {fileID: 450227356}
+  m_Layer: 5
+  m_Name: InputModule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &450227355
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1116149620649518159, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450227354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235509323}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &450227356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 5048390545921611348, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450227354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82cf35166701394ab910f41269944f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventSystemGameObject: {fileID: 0}
 --- !u!1 &620087095
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,10 +5869,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5506,7 +5907,7 @@ SpriteRenderer:
   m_Size: {x: 2.5, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &620087097
@@ -5519,10 +5920,219 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.049, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &711176800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9126816360689763936, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711176801}
+  - component: {fileID: 711176804}
+  - component: {fileID: 711176803}
+  - component: {fileID: 711176802}
+  m_Layer: 5
+  m_Name: FPSCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &711176801
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9191477988713999875, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711176800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1413568498}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 350, y: 80}
+  m_SizeDelta: {x: 287.10425, y: 81.81439}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &711176802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2442137715451620124, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711176800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a080b2252c3a59546a7462b0fb3ef79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateInterval: 0.3
+  _framesAccumulated: 0
+  _framesDrawnInTheInterval: 0
+  _timeLeft: 0
+  _text: {fileID: 0}
+  _currentFPS: 0
+--- !u!114 &711176803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 5799019452164969421, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711176800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.50980395}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 53aebb2602873ed4a9807e8a254a7d2f, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 6
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 128
+--- !u!222 &711176804
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 520085290127892560, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711176800}
+  m_CullTransparentMesh: 0
+--- !u!1 &717996843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 394108089, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717996844}
+  - component: {fileID: 717996848}
+  - component: {fileID: 717996847}
+  - component: {fileID: 717996846}
+  - component: {fileID: 717996845}
+  m_Layer: 5
+  m_Name: Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &717996844
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 394108090, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717996843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 105357991}
+  m_Father: {fileID: 1413568498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 701.0437, y: 85.6893}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!225 &717996845
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3905260812418888896, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717996843}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &717996846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 394108091, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717996843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d01eb79c6a6b34e87102aa12f27e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetText: {fileID: 105357992}
+  DisappearDelay: 3
+  DisappearDuration: 0.3
+  DesktopText: Press space to jump
+  MobileText: Tap anywhere to jump
+  _canvasGroup: {fileID: 0}
+--- !u!114 &717996847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 394108092, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717996843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.14901961}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &717996848
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 394108093, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717996843}
+  m_CullTransparentMesh: 0
 --- !u!1 &787869659
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,7 +6154,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &787869660
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5557,6 +6167,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -5572,10 +6183,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5600,8 +6213,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 4153240674832713612, guid: 8a1f96c93a153e34a98b5f6dd6bbfebd,
-    type: 3}
+  m_Sprite: {fileID: 4153240674832713612, guid: 8a1f96c93a153e34a98b5f6dd6bbfebd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5609,7 +6221,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &787869662
@@ -5622,6 +6234,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.612, y: -0.056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 261930200}
   - {fileID: 263465343}
@@ -5642,12 +6255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08209f823dbecef4ea16c0433219f1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionKey: 32
-  ActionKeyAlt: 350
   CooldownDuration: 1
   JumpFeedback: {fileID: 263465341}
   LandingFeedback: {fileID: 1984084856}
   DeniedFeedback: {fileID: 1514456390}
+  _lastJumpStartedAt: -100
 --- !u!1 &795591873
 GameObject:
   m_ObjectHideFlags: 0
@@ -5690,10 +6302,61 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179364279}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &820167778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4631585046452825954, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820167779}
+  - component: {fileID: 820167780}
+  m_Layer: 5
+  m_Name: NextDemoButtonInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &820167779
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 13077729290703520, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820167778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235509323}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &820167780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6157628501772734540, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820167778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29783400eeddb8f408f4095aaa44cd3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInputFeedback: {fileID: 1145347023}
 --- !u!1 &897481190
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,6 +6390,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1720066185}
   m_RootOrder: 1
@@ -5766,7 +6430,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 897481198}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Preset: 4
   HapticSettings:
     ForceGamepadID: 0
@@ -5810,7 +6489,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 897481198}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Sfx: {fileID: 8300000, guid: 86aa66a501648034f8ec69ba5d404514, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -5822,6 +6516,12 @@ MonoBehaviour:
   MinPitch: 0.9
   MaxPitch: 1.2
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!114 &897481194
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5857,7 +6557,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 897481198}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Sfx: {fileID: 8300000, guid: 4cf47ad5b31ea6640addd4045fa77c8b, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -5869,6 +6584,12 @@ MonoBehaviour:
   MinPitch: 0.8
   MaxPitch: 1.2
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!114 &897481195
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5904,7 +6625,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 897481198}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Channel: 0
   Duration: 0.15
   ResetShakerValuesAfterShake: 1
@@ -5912,10 +6648,8 @@ MonoBehaviour:
   RemapIntensityZero: 0
   RemapIntensityOne: 0.5
   Intensity:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -5923,8 +6657,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.5
+    - time: 0.5
       value: 1
       inSlope: 0
       outSlope: 0
@@ -5932,8 +6665,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -5981,7 +6713,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 897481198}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   BoundAnimator: {fileID: 1720066186}
   UpdateTrigger: 1
   TriggerMode: 0
@@ -6007,6 +6754,12 @@ MonoBehaviour:
   FloatValueMin: 0
   FloatValueMax: 5
   FloatIncrement: 1
+  _triggerParameter: 0
+  _boolParameter: 0
+  _intParameter: 0
+  _floatParameter: 0
+  _randomTriggerParameters: 
+  _randomBoolParameters: 
 --- !u!114 &897481197
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6042,7 +6795,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 897481198}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   RepeatUntilStopped: 0
   Channel: 0
   CameraShakeProperties:
@@ -6081,6 +6849,7 @@ MonoBehaviour:
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
   CooldownDuration: 0
   InitialDelay: 0
   CanPlayWhileAlreadyPlaying: 1
@@ -6092,19 +6861,40 @@ MonoBehaviour:
     OnPlay:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnPause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnResume:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnRevert:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
+    <OnPlayIsNull>k__BackingField: 0
+    <OnPauseIsNull>k__BackingField: 0
+    <OnResumeIsNull>k__BackingField: 0
+    <OnRevertIsNull>k__BackingField: 0
+    <OnCompleteIsNull>k__BackingField: 0
   DebugActive: 0
+  <IsPlaying>k__BackingField: 0
+  <TimesPlayed>k__BackingField: 0
+  <InScriptDrivenPause>k__BackingField: 0
+  <ContainsLoop>k__BackingField: 0
+  <ShouldRevertOnNextPlay>k__BackingField: 0
+  _startTime: 0
+  _holdingMax: 0
+  _lastStartAt: -3.4028235e+38
+  _pauseFound: 0
+  _totalDuration: 0
+  _shouldStop: 0
 --- !u!1 &1000273585
 GameObject:
   m_ObjectHideFlags: 0
@@ -6188,6 +6978,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179364279}
   m_RootOrder: 1
@@ -6206,6 +6997,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Channel: 0
   CooldownBetweenShakes: 0
+  _wiggle: {fileID: 0}
+  _shakeStartedTimestamp: -3.4028235e+38
 --- !u!114 &1000273590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6230,10 +7023,8 @@ MonoBehaviour:
     SmoothPingPong: 1
     UseSpeedCurve: 0
     SpeedCurve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 1
@@ -6241,8 +7032,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 1
         outSlope: 0
@@ -6260,10 +7050,8 @@ MonoBehaviour:
     RelativeAmplitude: 1
     UniformValues: 0
     Curve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 1
@@ -6271,8 +7059,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 1
         outSlope: 0
@@ -6294,10 +7081,8 @@ MonoBehaviour:
     LimitedTime: 0
     LimitedTimeTotal: 0
     LimitedTimeFalloff:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -6305,8 +7090,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -6331,10 +7115,8 @@ MonoBehaviour:
     SmoothPingPong: 1
     UseSpeedCurve: 0
     SpeedCurve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 1
@@ -6342,8 +7124,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 1
         outSlope: 0
@@ -6361,10 +7142,8 @@ MonoBehaviour:
     RelativeAmplitude: 1
     UniformValues: 0
     Curve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 1
@@ -6372,8 +7151,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 1
         outSlope: 0
@@ -6395,10 +7173,8 @@ MonoBehaviour:
     LimitedTime: 0
     LimitedTimeTotal: 0
     LimitedTimeFalloff:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -6406,8 +7182,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -6432,10 +7207,8 @@ MonoBehaviour:
     SmoothPingPong: 1
     UseSpeedCurve: 0
     SpeedCurve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 1
@@ -6443,8 +7216,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 1
         outSlope: 0
@@ -6462,10 +7234,8 @@ MonoBehaviour:
     RelativeAmplitude: 1
     UniformValues: 0
     Curve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 1
@@ -6473,8 +7243,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 1
         outSlope: 0
@@ -6496,10 +7265,8 @@ MonoBehaviour:
     LimitedTime: 0
     LimitedTimeTotal: 0
     LimitedTimeFalloff:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -6507,8 +7274,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -6598,6 +7364,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8aa3525151bb343b66b059b6095946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioListener: {fileID: 0}
+  _otherListeners: []
+--- !u!1 &1020018812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6948982214533352212, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020018813}
+  - component: {fileID: 1020018815}
+  - component: {fileID: 1020018814}
+  m_Layer: 5
+  m_Name: PressEnterText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1020018813
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7855667221185198617, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020018812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235509323}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -10.900005}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1020018814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4350146957859216060, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020018812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 53aebb2602873ed4a9807e8a254a7d2f, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '- PRESS ENTER -'
+--- !u!222 &1020018815
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7884212106511119281, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020018812}
+  m_CullTransparentMesh: 0
 --- !u!1 &1099164937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,6 +7480,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.19316715, y: 0.24905518, z: -8.253906}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1983435676}
   m_Father: {fileID: 1720066185}
@@ -6672,17 +7521,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1099164946}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   AnimatePositionTarget: {fileID: 1507647151}
   Mode: 1
   TimeScale: 0
   Space: 2
   AnimatePositionDuration: 0.2
   AnimatePositionCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6690,8 +7552,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.1
+    - time: 0.1
       value: 0.05
       inSlope: 0
       outSlope: 0
@@ -6699,8 +7560,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.9
+    - time: 0.9
       value: 0.95
       inSlope: 0
       outSlope: 0
@@ -6708,8 +7568,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -6724,10 +7583,8 @@ MonoBehaviour:
   RemapCurveOne: 5
   AnimateX: 0
   AnimatePositionCurveX:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6735,8 +7592,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -6744,8 +7600,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -6753,8 +7608,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6767,10 +7621,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateY: 1
   AnimatePositionCurveY:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6778,8 +7630,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -6787,8 +7638,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -6796,8 +7646,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6810,10 +7659,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateZ: 0
   AnimatePositionCurveZ:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6821,8 +7668,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -6830,8 +7676,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -6839,8 +7684,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6858,6 +7702,10 @@ MonoBehaviour:
   DestinationPosition: {x: 6, y: 1, z: 1}
   InitialPositionTransform: {fileID: 0}
   DestinationPositionTransform: {fileID: 0}
+  _newPosition: {x: 0, y: 0, z: 0}
+  _rectTransform: {fileID: 0}
+  _initialPosition: {x: 0, y: 0, z: 0}
+  _destinationPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1099164940
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6893,17 +7741,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1099164946}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   AnimatePositionTarget: {fileID: 2014058847}
   Mode: 1
   TimeScale: 0
   Space: 2
   AnimatePositionDuration: 0.2
   AnimatePositionCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6911,8 +7772,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.1
+    - time: 0.1
       value: 0.05
       inSlope: 0
       outSlope: 0
@@ -6920,8 +7780,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.9
+    - time: 0.9
       value: 0.95
       inSlope: 0
       outSlope: 0
@@ -6929,8 +7788,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -6945,10 +7803,8 @@ MonoBehaviour:
   RemapCurveOne: 25
   AnimateX: 0
   AnimatePositionCurveX:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6956,8 +7812,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -6965,8 +7820,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -6974,8 +7828,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6988,10 +7841,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateY: 1
   AnimatePositionCurveY:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -6999,8 +7850,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -7008,8 +7858,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -7017,8 +7866,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -7031,10 +7879,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateZ: 0
   AnimatePositionCurveZ:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -7042,8 +7888,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -7051,8 +7896,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -7060,8 +7904,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -7079,6 +7922,10 @@ MonoBehaviour:
   DestinationPosition: {x: 6, y: 1, z: 1}
   InitialPositionTransform: {fileID: 0}
   DestinationPositionTransform: {fileID: 0}
+  _newPosition: {x: 0, y: 0, z: 0}
+  _rectTransform: {fileID: 0}
+  _initialPosition: {x: 0, y: 0, z: 0}
+  _destinationPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1099164941
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7114,7 +7961,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1099164946}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Preset: 6
   HapticSettings:
     ForceGamepadID: 0
@@ -7158,7 +8020,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1099164946}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Sfx: {fileID: 8300000, guid: 1739ff78014ab3f44a5757aede3c7ea9, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -7170,6 +8047,12 @@ MonoBehaviour:
   MinPitch: 0.8
   MaxPitch: 1
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!114 &1099164943
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7205,17 +8088,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1099164946}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Channel: 0
   Duration: 0.25
   ResetShakerValuesAfterShake: 1
   ResetTargetValuesAfterShake: 1
   RelativeIntensity: 0
   Intensity:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 19.722752
       outSlope: 19.722752
@@ -7223,8 +8119,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0.035046726
-    - serializedVersion: 3
-      time: 0.020083621
+    - time: 0.020083621
       value: 1.0003967
       inSlope: 0
       outSlope: 0
@@ -7232,8 +8127,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3935155
+    - time: 0.3935155
       value: -0.23937741
       inSlope: 0
       outSlope: 0
@@ -7241,8 +8135,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.61353385
+    - time: 0.61353385
       value: 0.041101076
       inSlope: 0
       outSlope: 0
@@ -7250,8 +8143,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.90603024
+    - time: 0.90603024
       value: -0.081567384
       inSlope: 0
       outSlope: 0
@@ -7259,8 +8151,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -7308,7 +8199,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1099164946}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   RepeatUntilStopped: 0
   Channel: 0
   CameraShakeProperties:
@@ -7353,7 +8259,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1099164946}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Mode: 0
   BoundParticleSystem: {fileID: 1983435678}
   RandomParticleSystems: []
@@ -7389,6 +8310,7 @@ MonoBehaviour:
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
   CooldownDuration: 0
   InitialDelay: 0
   CanPlayWhileAlreadyPlaying: 1
@@ -7400,19 +8322,391 @@ MonoBehaviour:
     OnPlay:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnPause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnResume:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnRevert:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
+    <OnPlayIsNull>k__BackingField: 0
+    <OnPauseIsNull>k__BackingField: 0
+    <OnResumeIsNull>k__BackingField: 0
+    <OnRevertIsNull>k__BackingField: 0
+    <OnCompleteIsNull>k__BackingField: 0
   DebugActive: 0
+  <IsPlaying>k__BackingField: 0
+  <TimesPlayed>k__BackingField: 0
+  <InScriptDrivenPause>k__BackingField: 0
+  <ContainsLoop>k__BackingField: 0
+  <ShouldRevertOnNextPlay>k__BackingField: 0
+  _startTime: 0
+  _holdingMax: 0
+  _lastStartAt: -3.4028235e+38
+  _pauseFound: 0
+  _totalDuration: 0
+  _shouldStop: 0
+--- !u!1 &1145347022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323668150474, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145347027}
+  - component: {fileID: 1145347023}
+  - component: {fileID: 1145347026}
+  - component: {fileID: 1145347025}
+  - component: {fileID: 1145347024}
+  m_Layer: 5
+  m_Name: ButtonFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1145347023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323668150468, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145347022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks:
+  - {fileID: 1145347026}
+  - {fileID: 1145347025}
+  - {fileID: 1145347024}
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+      m_CallsDirty: 1
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+      m_CallsDirty: 1
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+      m_CallsDirty: 1
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+      m_CallsDirty: 1
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+      m_CallsDirty: 1
+    <OnPlayIsNull>k__BackingField: 0
+    <OnPauseIsNull>k__BackingField: 0
+    <OnResumeIsNull>k__BackingField: 0
+    <OnRevertIsNull>k__BackingField: 0
+    <OnCompleteIsNull>k__BackingField: 0
+  DebugActive: 0
+  <IsPlaying>k__BackingField: 0
+  <TimesPlayed>k__BackingField: 0
+  <InScriptDrivenPause>k__BackingField: 0
+  <ContainsLoop>k__BackingField: 0
+  <ShouldRevertOnNextPlay>k__BackingField: 0
+  _startTime: 0
+  _holdingMax: 0
+  _lastStartAt: -3.4028235e+38
+  _pauseFound: 0
+  _totalDuration: 0
+  _shouldStop: 0
+--- !u!114 &1145347024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 5195390090112612529, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145347022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e14417fec82fd45a6ccb78d3868d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Haptic Preset
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
+  DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1145347023}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
+  Preset: 4
+  HapticSettings:
+    ForceGamepadID: 0
+    GamepadID: 0
+    OnlyPlayIfHapticsSupported: 1
+    OnlyPlayIfAdvancedRequirementsMet: 0
+    OnlyPlayIfAmplitudeModulationSupported: 0
+    OnlyPlayIfFrequencyModulationSupported: 0
+--- !u!114 &1145347025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323668150469, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145347022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2ce51367856bd49b72678cc4263225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Sound
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
+  DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1145347023}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
+  Sfx: {fileID: 8300000, guid: 8378807d371fc264f9628946390df8d1, type: 3}
+  RandomSfx: []
+  TestButton: 0
+  TestStopButton: 0
+  PlayMethod: 0
+  PoolSize: 10
+  MinVolume: 1
+  MaxVolume: 1
+  MinPitch: 1
+  MaxPitch: 1
+  SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
+--- !u!114 &1145347026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323668150470, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145347022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fce7cea59bce742af6c0ddc82bad60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Load Scene
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
+  DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1145347023}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
+  LoadingSceneName: MMAdditiveLoadingScreenSimple
+  DestinationSceneName: FeelTactical
+  LoadingMode: 2
+  Priority: 4
+  InterpolateProgress: 1
+  SecureLoad: 1
+  BeforeEntryFadeDelay: 0
+  EntryFadeDuration: 0.2
+  AfterEntryFadeDelay: 0
+  BeforeExitFadeDelay: 0.2
+  ExitFadeDuration: 0.3
+  ProgressInterpolationSpeed: 4
+  FadeMode: 0
+  EntryFadeTween:
+    MMTweenDefinitionType: 0
+    MMTweenCurve: 9
+    Curve:
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  ExitFadeTween:
+    MMTweenDefinitionType: 0
+    MMTweenCurve: 9
+    Curve:
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+--- !u!224 &1145347027
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323668150475, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145347022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235509323}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1179364278
 GameObject:
   m_ObjectHideFlags: 0
@@ -7439,6 +8733,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1413568498}
   - {fileID: 1000273588}
@@ -7475,6 +8770,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179364279}
   m_RootOrder: 4
@@ -7519,11 +8815,150 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1720066185}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1235509322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721325208926032, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235509323}
+  - component: {fileID: 1235509326}
+  - component: {fileID: 1235509325}
+  - component: {fileID: 1235509324}
+  m_Layer: 5
+  m_Name: NextDemoButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1235509323
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721325208926033, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235509322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1145347027}
+  - {fileID: 450227355}
+  - {fileID: 820167779}
+  - {fileID: 185271608}
+  - {fileID: 1020018813}
+  m_Father: {fileID: 1413568498}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -40, y: 40}
+  m_SizeDelta: {x: 168.5404, y: 62.441315}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &1235509324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721325208926034, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235509322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1235509325}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1145347023}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: PlayFeedbacks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1235509325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721325208926035, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235509322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: aff4855d499cb7646b344323f4129b58, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1235509326
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721325208925996, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235509322}
+  m_CullTransparentMesh: 0
 --- !u!1 &1321556131
 GameObject:
   m_ObjectHideFlags: 0
@@ -7552,6 +8987,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.015167177, y: -0.1529448, z: -7.3206787}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2101845009}
   m_Father: {fileID: 1983435676}
@@ -7569,10 +9005,12 @@ ParticleSystemRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7599,6 +9037,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -7615,11 +9054,17 @@ ParticleSystemRenderer:
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
+  m_FreeformStretching: 0
+  m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!198 &1321556134
 ParticleSystem:
@@ -7628,19 +9073,19 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321556131}
-  serializedVersion: 6
+  serializedVersion: 8
   lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
+  emitterVelocityMode: 0
   looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -8190,6 +9635,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     maxNumParticles: 1000
+    customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -9781,6 +11227,62 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+  LifetimeByEmitterSpeedModule:
+    enabled: 0
+    m_Curve:
+      serializedVersion: 2
+      minMaxState: 1
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: -0.8
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 0.2
+          inSlope: -0.8
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    m_Range: {x: 0, y: 1}
   ForceModule:
     enabled: 1
     x:
@@ -11211,19 +12713,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 1
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 2101845009}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 2101845009}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -11397,17 +12900,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -12388,16 +13894,35 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &1413568498 stripped
+--- !u!224 &1413568498
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-    type: 3}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
   m_PrefabInstance: {fileID: 1512985553}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875078344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1235509323}
+  - {fileID: 717996844}
+  - {fileID: 711176801}
+  - {fileID: 2095931290}
+  m_Father: {fileID: 1179364279}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1507647151
 GameObject:
   m_ObjectHideFlags: 0
@@ -12426,6 +13951,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1718306438}
   m_RootOrder: 1
@@ -12450,12 +13976,12 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5041058542237983147, guid: 5cd9c308422e52a47b746cd9c2c3ba13,
-    type: 3}
+  m_Sprite: {fileID: -5041058542237983147, guid: 5cd9c308422e52a47b746cd9c2c3ba13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12480,118 +14006,95 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1179364279}
     m_Modifications:
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378249, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323258378253, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323258378253, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: m_Name
       value: NextDemoCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8516721323668150470, guid: a5ed96966948b2348b46dab87f87bbcf,
-        type: 3}
+    - target: {fileID: 8516721323668150470, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
       propertyPath: DestinationSceneName
       value: FeelTactical
       objectReference: {fileID: 0}
@@ -12641,6 +14144,7 @@ MonoBehaviour:
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
   CooldownDuration: 0
   InitialDelay: 0
   CanPlayWhileAlreadyPlaying: 1
@@ -12652,19 +14156,40 @@ MonoBehaviour:
     OnPlay:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnPause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnResume:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnRevert:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
+    <OnPlayIsNull>k__BackingField: 0
+    <OnPauseIsNull>k__BackingField: 0
+    <OnResumeIsNull>k__BackingField: 0
+    <OnRevertIsNull>k__BackingField: 0
+    <OnCompleteIsNull>k__BackingField: 0
   DebugActive: 0
+  <IsPlaying>k__BackingField: 0
+  <TimesPlayed>k__BackingField: 0
+  <InScriptDrivenPause>k__BackingField: 0
+  <ContainsLoop>k__BackingField: 0
+  <ShouldRevertOnNextPlay>k__BackingField: 0
+  _startTime: 0
+  _holdingMax: 0
+  _lastStartAt: -3.4028235e+38
+  _pauseFound: 0
+  _totalDuration: 0
+  _shouldStop: 0
 --- !u!114 &1514456391
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12700,17 +14225,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   AnimatePositionTarget: {fileID: 620087095}
   Mode: 1
   TimeScale: 0
   Space: 0
   AnimatePositionDuration: 0.2
   AnimatePositionCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -12718,8 +14256,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.1
+    - time: 0.1
       value: 0.05
       inSlope: 0
       outSlope: 0
@@ -12727,8 +14264,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.9
+    - time: 0.9
       value: 0.95
       inSlope: 0
       outSlope: 0
@@ -12736,8 +14272,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -12752,10 +14287,8 @@ MonoBehaviour:
   RemapCurveOne: 0.02
   AnimateX: 1
   AnimatePositionCurveX:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -12763,8 +14296,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -12772,8 +14304,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -12781,8 +14312,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -12795,10 +14325,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateY: 0
   AnimatePositionCurveY:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -12806,8 +14334,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -12815,8 +14342,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -12824,8 +14350,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -12838,10 +14363,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateZ: 0
   AnimatePositionCurveZ:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -12849,8 +14372,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -12858,8 +14380,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -12867,8 +14388,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -12886,6 +14406,10 @@ MonoBehaviour:
   DestinationPosition: {x: 1, y: 1, z: 1}
   InitialPositionTransform: {fileID: 0}
   DestinationPositionTransform: {fileID: 0}
+  _newPosition: {x: 0, y: 0, z: 0}
+  _rectTransform: {fileID: 0}
+  _initialPosition: {x: 0, y: 0, z: 0}
+  _destinationPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1514456393
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12921,7 +14445,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   Sfx: {fileID: 8300000, guid: 5e569d2a692222842bfc96e94520ab9a, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -12933,6 +14472,12 @@ MonoBehaviour:
   MinPitch: 1
   MaxPitch: 2
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!4 &1514456394
 Transform:
   m_ObjectHideFlags: 0
@@ -12943,6 +14488,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 787869662}
   m_RootOrder: 3
@@ -12975,6 +14521,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.015167177, y: -0.1529448, z: -7.3206787}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 303766948}
   m_Father: {fileID: 146274109}
@@ -12992,10 +14539,12 @@ ParticleSystemRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13022,6 +14571,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -13038,11 +14588,17 @@ ParticleSystemRenderer:
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
+  m_FreeformStretching: 0
+  m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!198 &1563117872
 ParticleSystem:
@@ -13051,19 +14607,19 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563117869}
-  serializedVersion: 6
+  serializedVersion: 8
   lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
+  emitterVelocityMode: 0
   looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -13613,6 +15169,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     maxNumParticles: 1000
+    customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -15204,6 +16761,62 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+  LifetimeByEmitterSpeedModule:
+    enabled: 0
+    m_Curve:
+      serializedVersion: 2
+      minMaxState: 1
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: -0.8
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 0.2
+          inSlope: -0.8
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    m_Range: {x: 0, y: 1}
   ForceModule:
     enabled: 1
     x:
@@ -16634,19 +18247,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 1
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 303766948}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 303766948}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -16820,17 +18434,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -17827,6 +19444,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1718306437
 Canvas:
   m_ObjectHideFlags: 0
@@ -17858,6 +19476,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2014058848}
   - {fileID: 1507647152}
@@ -17898,6 +19517,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.612, y: -0.056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1946026116}
   - {fileID: 897481191}
@@ -17908,7 +19528,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1720066186
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17921,6 +19541,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -17937,12 +19558,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08209f823dbecef4ea16c0433219f1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionKey: 32
-  ActionKeyAlt: 350
   CooldownDuration: 1
   JumpFeedback: {fileID: 897481198}
   LandingFeedback: {fileID: 1099164946}
   DeniedFeedback: {fileID: 1766191526}
+  _lastJumpStartedAt: -100
 --- !u!212 &1720066188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17954,10 +19574,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17982,8 +19604,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 4153240674832713612, guid: 8a1f96c93a153e34a98b5f6dd6bbfebd,
-    type: 3}
+  m_Sprite: {fileID: 4153240674832713612, guid: 8a1f96c93a153e34a98b5f6dd6bbfebd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17991,7 +19612,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1766191521
@@ -18024,6 +19645,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1720066185}
   m_RootOrder: 3
@@ -18063,17 +19685,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1766191526}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   AnimatePositionTarget: {fileID: 620087095}
   Mode: 1
   TimeScale: 0
   Space: 0
   AnimatePositionDuration: 0.2
   AnimatePositionCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18081,8 +19716,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.1
+    - time: 0.1
       value: 0.05
       inSlope: 0
       outSlope: 0
@@ -18090,8 +19724,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.9
+    - time: 0.9
       value: 0.95
       inSlope: 0
       outSlope: 0
@@ -18099,8 +19732,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -18115,10 +19747,8 @@ MonoBehaviour:
   RemapCurveOne: 0.02
   AnimateX: 1
   AnimatePositionCurveX:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18126,8 +19756,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -18135,8 +19764,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -18144,8 +19772,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18158,10 +19785,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateY: 0
   AnimatePositionCurveY:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18169,8 +19794,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -18178,8 +19802,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -18187,8 +19810,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18201,10 +19823,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateZ: 0
   AnimatePositionCurveZ:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18212,8 +19832,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -18221,8 +19840,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -18230,8 +19848,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18249,6 +19866,10 @@ MonoBehaviour:
   DestinationPosition: {x: 1, y: 1, z: 1}
   InitialPositionTransform: {fileID: 0}
   DestinationPositionTransform: {fileID: 0}
+  _newPosition: {x: 0, y: 0, z: 0}
+  _rectTransform: {fileID: 0}
+  _initialPosition: {x: 0, y: 0, z: 0}
+  _destinationPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1766191524
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18284,7 +19905,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1766191526}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Preset: 2
   HapticSettings:
     ForceGamepadID: 0
@@ -18328,7 +19964,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 1766191526}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 1
   Sfx: {fileID: 8300000, guid: 5e569d2a692222842bfc96e94520ab9a, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -18340,6 +19991,12 @@ MonoBehaviour:
   MinPitch: 1
   MaxPitch: 2
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!114 &1766191526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18366,6 +20023,7 @@ MonoBehaviour:
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
   CooldownDuration: 0
   InitialDelay: 0
   CanPlayWhileAlreadyPlaying: 1
@@ -18377,19 +20035,120 @@ MonoBehaviour:
     OnPlay:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnPause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnResume:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnRevert:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
+    <OnPlayIsNull>k__BackingField: 0
+    <OnPauseIsNull>k__BackingField: 0
+    <OnResumeIsNull>k__BackingField: 0
+    <OnRevertIsNull>k__BackingField: 0
+    <OnCompleteIsNull>k__BackingField: 0
   DebugActive: 0
+  <IsPlaying>k__BackingField: 0
+  <TimesPlayed>k__BackingField: 0
+  <InScriptDrivenPause>k__BackingField: 0
+  <ContainsLoop>k__BackingField: 0
+  <ShouldRevertOnNextPlay>k__BackingField: 0
+  _startTime: 0
+  _holdingMax: 0
+  _lastStartAt: -3.4028235e+38
+  _pauseFound: 0
+  _totalDuration: 0
+  _shouldStop: 0
+--- !u!1 &1875078344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323258378253, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1413568498}
+  - component: {fileID: 1875078347}
+  - component: {fileID: 1875078346}
+  - component: {fileID: 1875078345}
+  m_Layer: 5
+  m_Name: NextDemoCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1875078345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323258378254, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875078344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 3
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1875078346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323258378255, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875078344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1875078347
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8516721323258378248, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875078344}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1918231319
 GameObject:
   m_ObjectHideFlags: 0
@@ -18430,12 +20189,16 @@ MonoBehaviour:
   Shaking: 0
   ForwardDirection: 1
   TimescaleMode: 0
+  _listeningToEvents: 0
+  _shakeStartedTimestamp: -3.4028235e+38
+  _remappedTimeSinceStart: 0
+  _resetShakerValuesAfterShake: 0
+  _resetTargetValuesAfterShake: 0
+  _journey: 0
   RelativeIntensity: 0
   ShakeIntensity:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18443,8 +20206,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.5
+    - time: 0.5
       value: 1
       inSlope: 0
       outSlope: 0
@@ -18452,8 +20214,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18466,6 +20227,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   RemapIntensityZero: 0
   RemapIntensityOne: 1
+  _volume: {fileID: 0}
+  _chromaticAberration: {fileID: 0}
+  _initialIntensity: 0
+  _originalShakeDuration: 0
+  _originalShakeIntensity:
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _originalRemapIntensityZero: 0
+  _originalRemapIntensityOne: 0
+  _originalRelativeIntensity: 0
 --- !u!114 &1918231321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18487,12 +20260,16 @@ MonoBehaviour:
   Shaking: 0
   ForwardDirection: 1
   TimescaleMode: 0
+  _listeningToEvents: 0
+  _shakeStartedTimestamp: -3.4028235e+38
+  _remappedTimeSinceStart: 0
+  _resetShakerValuesAfterShake: 0
+  _resetTargetValuesAfterShake: 0
+  _journey: 0
   RelativeIntensity: 0
   ShakeIntensity:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18500,8 +20277,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.2
+    - time: 0.2
       value: 1
       inSlope: 0
       outSlope: 0
@@ -18509,8 +20285,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.65
+    - time: 0.65
       value: -0.3
       inSlope: 0
       outSlope: 0
@@ -18518,8 +20293,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.8
+    - time: 0.8
       value: 0.1
       inSlope: 0
       outSlope: 0
@@ -18527,8 +20301,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.85
+    - time: 0.85
       value: -0.1
       inSlope: 0
       outSlope: 0
@@ -18536,8 +20309,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -18550,6 +20322,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   RemapIntensityZero: 0
   RemapIntensityOne: 50
+  _volume: {fileID: 0}
+  _lensDistortion: {fileID: 0}
+  _initialIntensity: 0
+  _originalShakeDuration: 0
+  _originalShakeIntensity:
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _originalRemapIntensityZero: 0
+  _originalRemapIntensityOne: 0
+  _originalRelativeIntensity: 0
 --- !u!114 &1918231322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18577,6 +20361,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.03515625, y: -0.42382812, z: -26.421875}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179364279}
   m_RootOrder: 2
@@ -18608,6 +20393,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1720066185}
   m_RootOrder: 0
@@ -18623,10 +20409,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18651,8 +20439,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1488195887490226262, guid: 9ce434ac86a021e418c3060399e7abdd,
-    type: 3}
+  m_Sprite: {fileID: -1488195887490226262, guid: 9ce434ac86a021e418c3060399e7abdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18660,7 +20447,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1983435675
@@ -18691,6 +20478,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.21416718, y: -0.41405517, z: 8.176}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1321556132}
   m_Father: {fileID: 1099164938}
@@ -18708,10 +20496,12 @@ ParticleSystemRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18738,6 +20528,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -18754,11 +20545,17 @@ ParticleSystemRenderer:
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
+  m_FreeformStretching: 0
+  m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!198 &1983435678
 ParticleSystem:
@@ -18767,19 +20564,19 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983435675}
-  serializedVersion: 6
+  serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
+  emitterVelocityMode: 0
   looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -19329,6 +21126,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     maxNumParticles: 1000
+    customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 1
     rotation3D: 0
     gravityModifier:
@@ -20911,6 +22709,62 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+  LifetimeByEmitterSpeedModule:
+    enabled: 0
+    m_Curve:
+      serializedVersion: 2
+      minMaxState: 1
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: -0.8
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 0.2
+          inSlope: -0.8
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    m_Range: {x: 0, y: 1}
   ForceModule:
     enabled: 0
     x:
@@ -22341,19 +24195,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -22527,17 +24382,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -23509,6 +25367,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.19316715, y: 0.24905518, z: -8.253906}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 146274109}
   m_Father: {fileID: 787869662}
@@ -23549,7 +25408,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   Mode: 0
   BoundParticleSystem: {fileID: 146274108}
   RandomParticleSystems: []
@@ -23584,6 +25458,7 @@ MonoBehaviour:
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
   CooldownDuration: 0
   InitialDelay: 0
   CanPlayWhileAlreadyPlaying: 1
@@ -23595,19 +25470,40 @@ MonoBehaviour:
     OnPlay:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnPause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnResume:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnRevert:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
+    <OnPlayIsNull>k__BackingField: 0
+    <OnPauseIsNull>k__BackingField: 0
+    <OnResumeIsNull>k__BackingField: 0
+    <OnRevertIsNull>k__BackingField: 0
+    <OnCompleteIsNull>k__BackingField: 0
   DebugActive: 0
+  <IsPlaying>k__BackingField: 0
+  <TimesPlayed>k__BackingField: 0
+  <InScriptDrivenPause>k__BackingField: 0
+  <ContainsLoop>k__BackingField: 0
+  <ShouldRevertOnNextPlay>k__BackingField: 0
+  _startTime: 0
+  _holdingMax: 0
+  _lastStartAt: -3.4028235e+38
+  _pauseFound: 0
+  _totalDuration: 0
+  _shouldStop: 0
 --- !u!114 &1984084857
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23643,7 +25539,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   RepeatUntilStopped: 0
   Channel: 0
   CameraShakeProperties:
@@ -23688,17 +25599,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   Channel: 0
   Duration: 0.25
   ResetShakerValuesAfterShake: 1
   ResetTargetValuesAfterShake: 1
   RelativeIntensity: 0
   Intensity:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 19.722752
       outSlope: 19.722752
@@ -23706,8 +25630,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0.035046726
-    - serializedVersion: 3
-      time: 0.020083621
+    - time: 0.020083621
       value: 1.0003967
       inSlope: 0
       outSlope: 0
@@ -23715,8 +25638,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3935155
+    - time: 0.3935155
       value: -0.23937741
       inSlope: 0
       outSlope: 0
@@ -23724,8 +25646,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.61353385
+    - time: 0.61353385
       value: 0.041101076
       inSlope: 0
       outSlope: 0
@@ -23733,8 +25654,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.90603024
+    - time: 0.90603024
       value: -0.081567384
       inSlope: 0
       outSlope: 0
@@ -23742,8 +25662,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -23791,7 +25710,22 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   Sfx: {fileID: 8300000, guid: 1739ff78014ab3f44a5757aede3c7ea9, type: 3}
   RandomSfx: []
   TestButton: 0
@@ -23803,6 +25737,12 @@ MonoBehaviour:
   MinPitch: 0.8
   MaxPitch: 1
   SfxAudioMixerGroup: {fileID: 0}
+  _randomClip: {fileID: 0}
+  _cachedAudioSource: {fileID: 0}
+  _pool: []
+  _tempAudioSource: {fileID: 0}
+  _duration: 0
+  _editorAudioSource: {fileID: 0}
 --- !u!114 &1984084861
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23838,17 +25778,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   AnimatePositionTarget: {fileID: 2014058847}
   Mode: 1
   TimeScale: 0
   Space: 2
   AnimatePositionDuration: 0.2
   AnimatePositionCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -23856,8 +25809,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.1
+    - time: 0.1
       value: 0.05
       inSlope: 0
       outSlope: 0
@@ -23865,8 +25817,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.9
+    - time: 0.9
       value: 0.95
       inSlope: 0
       outSlope: 0
@@ -23874,8 +25825,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -23890,10 +25840,8 @@ MonoBehaviour:
   RemapCurveOne: 25
   AnimateX: 0
   AnimatePositionCurveX:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -23901,8 +25849,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -23910,8 +25857,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -23919,8 +25865,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -23933,10 +25878,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateY: 1
   AnimatePositionCurveY:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -23944,8 +25887,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -23953,8 +25895,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -23962,8 +25903,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -23976,10 +25916,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateZ: 0
   AnimatePositionCurveZ:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -23987,8 +25925,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -23996,8 +25933,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -24005,8 +25941,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24024,6 +25959,10 @@ MonoBehaviour:
   DestinationPosition: {x: 6, y: 1, z: 1}
   InitialPositionTransform: {fileID: 0}
   DestinationPositionTransform: {fileID: 0}
+  _newPosition: {x: 0, y: 0, z: 0}
+  _rectTransform: {fileID: 0}
+  _initialPosition: {x: 0, y: 0, z: 0}
+  _destinationPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1984084862
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -24059,17 +25998,30 @@ MonoBehaviour:
     TrackID: 0
     Quantized: 0
     TargetBPM: 120
+  <Owner>k__BackingField: {fileID: 0}
   DebugActive: 0
+  <ScriptDrivenPause>k__BackingField: 0
+  <ScriptDrivenPauseAutoResume>k__BackingField: 0
+  <IsPlaying>k__BackingField: 0
+  _lastPlayTimestamp: -1
+  _playsLeft: 0
+  _initialized: 0
+  _sequenceTrackID: 0
+  _hostMMFeedbacks: {fileID: 0}
+  _beatInterval: 0
+  BeatThisFrame: 0
+  LastBeatIndex: 0
+  CurrentSequenceIndex: 0
+  LastBeatTimestamp: 0
+  _isHostMMFeedbacksNotNull: 0
   AnimatePositionTarget: {fileID: 1507647151}
   Mode: 1
   TimeScale: 0
   Space: 2
   AnimatePositionDuration: 0.2
   AnimatePositionCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24077,8 +26029,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.1
+    - time: 0.1
       value: 0.05
       inSlope: 0
       outSlope: 0
@@ -24086,8 +26037,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.9
+    - time: 0.9
       value: 0.95
       inSlope: 0
       outSlope: 0
@@ -24095,8 +26045,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -24111,10 +26060,8 @@ MonoBehaviour:
   RemapCurveOne: 5
   AnimateX: 0
   AnimatePositionCurveX:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24122,8 +26069,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -24131,8 +26077,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -24140,8 +26085,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24154,10 +26098,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateY: 1
   AnimatePositionCurveY:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24165,8 +26107,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -24174,8 +26115,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -24183,8 +26123,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24197,10 +26136,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimateZ: 0
   AnimatePositionCurveZ:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24208,8 +26145,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 0
       outSlope: 0
@@ -24217,8 +26153,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.6
+    - time: 0.6
       value: -1
       inSlope: 0
       outSlope: 0
@@ -24226,8 +26161,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -24245,6 +26179,10 @@ MonoBehaviour:
   DestinationPosition: {x: 6, y: 1, z: 1}
   InitialPositionTransform: {fileID: 0}
   DestinationPositionTransform: {fileID: 0}
+  _newPosition: {x: 0, y: 0, z: 0}
+  _rectTransform: {fileID: 0}
+  _initialPosition: {x: 0, y: 0, z: 0}
+  _destinationPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2014058847
 GameObject:
   m_ObjectHideFlags: 0
@@ -24273,6 +26211,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1718306438}
   m_RootOrder: 0
@@ -24297,12 +26236,12 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9093796065708592562, guid: 5cd9c308422e52a47b746cd9c2c3ba13,
-    type: 3}
+  m_Sprite: {fileID: 9093796065708592562, guid: 5cd9c308422e52a47b746cd9c2c3ba13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24319,6 +26258,86 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014058847}
+  m_CullTransparentMesh: 0
+--- !u!1 &2095931289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7807506921198983201, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2095931290}
+  - component: {fileID: 2095931292}
+  - component: {fileID: 2095931291}
+  m_Layer: 5
+  m_Name: VersionNumber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2095931290
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4784501716528579087, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095931289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1413568498}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 350, y: 50}
+  m_SizeDelta: {x: 287.10425, y: 81.81445}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &2095931291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8982903856096212054, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095931289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.19215687}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 53aebb2602873ed4a9807e8a254a7d2f, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 6
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: v3.4
+--- !u!222 &2095931292
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1883792726702832116, guid: a5ed96966948b2348b46dab87f87bbcf, type: 3}
+  m_PrefabInstance: {fileID: 1512985553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095931289}
   m_CullTransparentMesh: 0
 --- !u!1 &2101845008
 GameObject:
@@ -24346,6 +26365,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1321556132}
   m_RootOrder: 0
